@@ -10,6 +10,9 @@ Servidor local de alquilartemis con rest API de base de datos.
    - Importamos la base de datos alquilartemis en phpmyadmin
 
 2. instalacion de paquetes:
+
+Creamos una carpeta llamada "backend" en la cual vamos a ejecutar los siguientes comandos
+
    - Instalamos el package.json con el comando: 
    ```bash
    npm i -y

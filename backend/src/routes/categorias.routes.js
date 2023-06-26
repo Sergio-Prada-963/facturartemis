@@ -1,8 +1,10 @@
 import { Router } from "express";
 import { methodsHTTP as categoriaCotrollers} from "../controllers/categoria.controller.js";
 
-const router = Router();
+const getAll = Router();
+const insert = Router();
 
-router.get("/", categoriaCotrollers.getCategoria);
+getAll.get("/", categoriaCotrollers.getCategoria);
+insert.get("/", categoriaCotrollers.insertCategoria);
 
-export default router;
+export {getAll, insert};

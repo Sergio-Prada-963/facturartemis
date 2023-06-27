@@ -2,11 +2,12 @@ import express from "express";
 import {getAll, insert} from "./routes/categorias.routes.js"
 import getAllContructora from "./routes/constructora.routes.js"
 import getAllCotizaciones from "./routes/cotizaciones.routes.js"
-import getAllCotizaciones from "./routes/cotizaciones.routes.js";
+import { Router } from "express";
 
 const app = express();
-
 app.set("port",3309);
+
+app.use(express.static('front'))
 
 app.use("/api/categorias",getAll)
 app.use("/api/insertCategoria",insert)

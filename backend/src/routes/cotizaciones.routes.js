@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { methodsHTTP as categoriaCotrollers} from "../controllers/cotozaciones.controller.js";
+import { methodsHTTP as categoriaCotrollers} from "../controllers/cotizaciones.controller.js";
 
 const getAllCotizaciones = Router();
 

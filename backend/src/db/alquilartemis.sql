@@ -130,7 +130,6 @@ INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_x_dia`, `stoc
 (3, 'Varillas', 120000, NULL, 3);
 
 
-INSERT INTO `productos_x_cotizaciones` (`id_registro`, `fk_id_producto`, `fk_id_detalle`) VALUES (NULL, '2', '1');
 -- --------------------------------------------------------
 
 --
@@ -146,6 +145,7 @@ CREATE TABLE `productos_x_cotizaciones` (
 --
 -- Índices para tablas volcadas
 --
+
 
 --
 -- Indices de la tabla `categorias`
@@ -231,7 +231,6 @@ ALTER TABLE `productos_x_cotizaciones`
 --
 -- Restricciones para tablas volcadas
 --
-
 --
 -- Filtros para la tabla `cotizaciones`
 --

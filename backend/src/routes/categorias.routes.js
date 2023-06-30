@@ -1,10 +1,12 @@
 import { Router } from "express";
 import { methodsHTTP as categoriaCotrollers} from "../controllers/categoria.controller.js";
 
-const getAll = Router();
-const insert = Router();
+const routerCategoria = Router();
 
-getAll.get("/", categoriaCotrollers.getCategoria);
-insert.get("/", categoriaCotrollers.insertCategoria);
+routerCategoria.get("/", categoriaCotrollers.getCategoria);
+routerCategoria.get("/:id", categoriaCotrollers.getCategoriaId);
+routerCategoria.post("/", categoriaCotrollers.addCategoria);
+routerCategoria.delete("/:id", categoriaCotrollers.deleteCategoria);
+routerCategoria.put("/:id", categoriaCotrollers.updateCategoria);
 
-export {getAll, insert};
+export default routerCategoria;

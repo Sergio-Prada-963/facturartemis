@@ -129,6 +129,8 @@ INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_x_dia`, `stoc
 (2, 'Bulto Cemento', 350000, NULL, 2),
 (3, 'Varillas', 120000, NULL, 3);
 
+
+INSERT INTO `productos_x_cotizaciones` (`id_registro`, `fk_id_producto`, `fk_id_detalle`) VALUES (NULL, '2', '1');
 -- --------------------------------------------------------
 
 --

@@ -1,8 +1,12 @@
 import { Router } from "express";
 import { methodsHTTP as categoriaCotrollers} from "../controllers/CxP.controllers.js";
 
-const getAllCotxPro = Router();
+const routerCotxPro = Router();
 
-getAllCotxPro.get("/", categoriaCotrollers.getCxP);
+routerCotxPro.get("/", categoriaCotrollers.getCxP);
+routerCotxPro.get("/:id", categoriaCotrollers.getCxPId);
+routerCotxPro.post("/", categoriaCotrollers.addCxP);
+routerCotxPro.delete("/:id", categoriaCotrollers.deleteCxP);
+routerCotxPro.put("/:id", categoriaCotrollers.updateCxP);
 
-export default getAllCotxPro;
+export default routerCotxPro;

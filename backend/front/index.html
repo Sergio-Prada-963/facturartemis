@@ -1,220 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-</head>
-<body>    
-    <nav>
-        <div>
-            <a href="#">Home</a>
-            <a href="/api/users" target="_blank">Users</a>
-            <a href="/api/constructora" target="_blank">Constructora</a>
-            <a href="/api/empleados" target="_blank">empleados</a>
-            <a href="/api/productos" target="_blank">Productos</a>
-            <a href="/api/categorias" target="_blank">Categorias</a>
-            <a href="/api/cotizaciones" target="_blank">Cotizaciones</a>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container"><span></span><span></span><span></span><span></span>
         </div>
-    </nav>
-<!-- boton chido -->
-<div class="box-icon-modern-decor"></div><a class="button button-primary button-ujarak" href="#">View All Services</a>
-<!-- Modalazo -->
-<div class="modal fade" id="modalCta" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4>Contact Us</h4>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
-      <div class="modal-body">
-        <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" data-form-type="contact-modal" method="post" action="bat/rd-mailform.php">
-          <div class="row row-14 gutters-14">
-            <div class="col-12">
-              <div class="form-wrap">
-                <input class="form-input" id="contact-modal-name" type="text" name="name" data-constraints="@Required">
-                <label class="form-label" for="contact-modal-name">Your Name</label>
+    </div>
+    <div class="page">
+      <div id="home">
+        <!-- Page Header-->
+        <header class="section page-header">
+          <!-- RD Navbar-->
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+              <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                  <!-- RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!-- RD Navbar Brand-->
+                    <div class="rd-navbar-brand"><a class="brand" href="index.html"><h2>Sergio Prada</h2></a></div>
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item active"><a class="rd-nav-link" href="#home">Home</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#categorias">Categorias</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#empleados">Empleados</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#productos">Productos</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#constructora">Constructora</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#cotizaciones">Cotizaciones</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-12">
-              <div class="form-wrap">
-                <input class="form-input" id="contact-modal-email" type="email" name="email" data-constraints="@Email @Required">
-                <label class="form-label" for="contact-modal-email">E-mail</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-wrap">
-                <input class="form-input" id="contact-modal-phone" type="text" name="phone" data-constraints="@Numeric">
-                <label class="form-label" for="contact-modal-phone">Phone</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-wrap">
-                <label class="form-label" for="contact-modal-message">Message</label>
-                <textarea class="form-input textarea-lg" id="contact-modal-message" name="message" data-constraints="@Required"></textarea>
+            </nav>
+          </div>
+        </header>
+        
+        <!-- Home -->
+        <div class="container">
+          <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Web Alquilartemis</h1>
+        </div>
+      </div>
+
+      <!-- Info categorias-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="img/infoCatego2.jpg">
+          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
+            <div class="container">
+              <div class="row row-30 justify-content-end text-right">
+                <div class="col-sm-7">
+                  <h3 class="wow fadeInLeft">Todas las categorias diponibles!</h3>
+                </div>
               </div>
             </div>
           </div>
-          <button class="button button-primary button-pipaluk" type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- canvas particles js -->
-
-<div class="col-md-6 col-lg-5 col-xl-4 text-center"><a class="text-img" href="#">
-  <div id="particles-js"></div><span class="counter">10</span></a></div>
-<div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
-  
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoria">
-      New Categoria
-    </button>
-    <!-- Tabla  Categorias -->
-    <table class="table table-striped-columns">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre Categorias</th>
-          <th scope="col">Descripcion</th>
-          <th scope="col">Imagen</th>
-        </tr>
-      </thead>
-      <tbody id="categorias">
-      </tbody>
-    </table>
-    
-
-    <!-- Tabla  Constuctora -->
-    <table class="table table-striped-columns">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre constructora</th>
-            <th scope="col">Nit Constructora</th>
-            <th scope="col">Representante</th>
-            <th scope="col">Email</th>
-            <th scope="col">Telefono</th>
-          </tr>
-        </thead>
-        <tbody id="constructora">
-        </tbody>
-      </table>
-      
-
-    <!-- Tabla  empleados -->
-    <table class="table table-striped-columns">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre empleado</th>
-            <th scope="col">Email</th>
-            <th scope="col">Celular</th>
-            <th scope="col">Contraseña</th>
-          </tr>
-        </thead>
-        <tbody id="empleados">
-        </tbody>
-      </table>
-      
-
-    <!-- Tabla  productos -->
-    <table class="table table-striped-columns">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre producto</th>
-            <th scope="col">Precio Dia</th>
-            <th scope="col">Stock</th>
-            <th scope="col">categoria</th>
-          </tr>
-        </thead>
-        <tbody id="productos">
-        </tbody>
-      </table>
-      
-
-    <!-- Tabla  cotizaciones -->
-    <table class="table table-striped-columns">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Empleado</th>
-            <th scope="col">Contructora</th>
-            <th scope="col">fecha</th>
-            <th scope="col">hora</th>
-            <th scope="col">Dia</th>
-            <th scope="col">Duracion</th>
-          </tr>
-        </thead>
-        <tbody id="cotizaciones">
-        </tbody>
-      </table>
-
-
-
-<!-- Modal Categorias -->
-<div class="modal fade" id="categoria" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Nueva Categoria</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="post" class="form1" id="forCategoria">
-          <div class="mb-3 mb1">
-            <label class="form-label">Selecciona un usuario</label>
-            <select name="user" id="user" class="form-select">
-                <option value="">Selecciona un usuario</option>
-                <option value="Alejandro">Alejandro</option>
-                <option value="Juan">Juan</option>
-                <option value="Sergio">Sergio</option>
-            </select>
-          </div>
-          <input type="submit" value="Ingresar" class="btn btn-secondary input"><hr>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-        <!-- formularios -->
-        <!-- <div class="descripcion">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum beatae, esse deserunt dignissimos quidem adipisci quos quisquam, ut numquam vel amet repellat expedita voluptatum voluptate voluptas? Nam a quod aut dolorem non quos odio, nemo tempore nulla quas dicta dolores vero! Vel sed voluptatem libero et quas provident ullam eius quo architecto fugiat, suscipit aut assumenda hic eum delectus recusandae in placeat fugit ipsam numquam totam officiis maxime perspiciatis ratione. Suscipit, quae doloremque. Quo rerum fugiat, impedit velit dolor expedita cum nulla delectus, voluptas numquam dolorum illum dolorem excepturi? Harum repudiandae at rem aperiam laboriosam praesentium nihil reiciendis dolor tempore aut nostrum, reprehenderit commodi dicta quaerat non voluptatum, blanditiis libero, nobis exercitationem labore voluptates voluptatibus amet natus. Sit nihil error expedita ullam nesciunt voluptatum aut laborum harum soluta adipisci optio reprehenderit ad esse, tempore quisquam porro minus, quas voluptate! Voluptatibus ut beatae perspiciatis, vel id distinctio, libero temporibus voluptatem quo voluptate quaerat rerum quae? Dolores exercitationem facilis veritatis consequatur consectetur eveniet excepturi quis accusamus id, doloremque odit impedit iure perferendis ratione assumenda officiis soluta blanditiis suscipit? Iure, consectetur dolorem vel animi ex consequatur impedit voluptatem ab pariatur eum eveniet, minima ullam soluta possimus nisi debitis voluptate, facere sint quisquam culpa!</p>
         </div>
-        <form action="/users" method="post" class="form1">
-            <div class="mb-3 mb1">
-              <label class="form-label">Selecciona un usuario</label>
-              <select name="user" id="user" class="form-select">
-                  <option value="">Selecciona un usuario</option>
-                  <option value="Alejandro">Alejandro</option>
-                  <option value="Juan">Juan</option>
-                  <option value="Sergio">Sergio</option>
-              </select>
+      </section>
+
+      <!-- Parte de categorias-->
+      <section class="section section-sm section-first bg-default text-center" id="categorias">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <!-- Tabla  Categorias -->
+            <table class="table table-striped-columns">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre Categorias</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Imagen</th>
+                </tr>
+              </thead>
+              <tbody id="categorias">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- info empleados-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="img/empleados.jpg">
+          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
+            <div class="container">
+              <div class="row row-30 justify-content-end text-right">
+                <div class="col-sm-7">
+                  <h3 class="wow fadeInLeft">Los mejores trabajando para ti!</h3>
+                </div>
+              </div>
             </div>
-            <input type="submit" value="Ingresar" class="btn btn-secondary input"><hr>
-            <div class="mb-3">
-              <h2>No estas registrado?</h2>
-              <label for="registro" class="form-label">registrate</label>
-              <input type="text" class="form-control" name="registro" id="registro" placeholder="Registra tu nombre">
+          </div>
+        </div>
+      </section>
+
+      <!-- Parte de Empleados-->
+      <section class="section section-sm section-first bg-default text-center" id="empleados">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <!-- Tabla  empleados -->
+            <table class="table table-striped-columns">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre empleado</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Celular</th>
+                  <th scope="col">Contraseña</th>
+                </tr>
+              </thead>
+              <tbody id="empleados">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info productos-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="img/productos.jpg">
+          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
+            <div class="container">
+              <div class="row row-30 justify-content-end text-right">
+                <div class="col-sm-7">
+                  <h3 class="wow fadeInLeft">Todas la marcas diponibles!</h3>
+                </div>
+              </div>
             </div>
-            <input type="submit" value="Registrar" class="btn btn-secondary">
-        </form> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parte de productos-->
+      <section class="section section-sm section-first bg-default text-center" id="productos">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <!-- Tabla  productos -->
+            <table class="table table-striped-columns">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre producto</th>
+                  <th scope="col">Precio Dia</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">categoria</th>
+                </tr>
+              </thead>
+              <tbody id="productos">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info constructoras-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="img/constructoras.jpg">
+          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
+            <div class="container">
+              <div class="row row-30 justify-content-end text-right">
+                <div class="col-sm-7">
+                  <h3 class="wow fadeInLeft">Nuestros Clientes mas frecuentes!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parte de constructoras-->
+      <section class="section section-sm section-first bg-default text-center" id="constructoras">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <!-- Tabla  Constuctora -->
+            <table class="table table-striped-columns">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre constructora</th>
+                  <th scope="col">Nit Constructora</th>
+                  <th scope="col">Representante</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Telefono</th>
+                </tr>
+              </thead>
+              <tbody id="constructora">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Cotizaciones-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="img/cotizaciones.jpg">
+          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
+            <div class="container">
+              <div class="row row-30 justify-content-end text-right">
+                <div class="col-sm-7">
+                  <h3 class="wow fadeInLeft">Algunas de nustras cotizaciones!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parte de cotizaciones-->
+      <section class="section section-sm section-first bg-default text-center" id="cotizacioens">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <!-- Tabla  cotizaciones -->
+            <table class="table table-striped-columns">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Empleado</th>
+                  <th scope="col">Contructora</th>
+                  <th scope="col">fecha</th>
+                  <th scope="col">hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Duracion</th>
+                </tr>
+              </thead>
+              <tbody id="cotizaciones">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <footer class="section section-fluid footer-minimal context-dark">
+        <div class="bg-gray-15">
+          <div class="container-fluid">
+            <div class="footer-minimal-bottom-panel text-sm-left">
+              <div class="row row-10 align-items-md-center">
+                <div class="col-sm-6 col-md-4 order-sm-first">
+                  <!-- Rights-->
+                  <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Sergio Prada 🤠 </span>
+                  </p>
+                </div>
+                <div class="col-sm-6 col-md-4 text-md-right"><span>All rights reserved.</span> <span>Design&nbsp;by&nbsp;<a href="https://github.com/Sergio-Prada-963">Camper Sergio Prada</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      
+    </div>
+
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- tablas -->
     <script src="data/categorias.js" type="module"></script>
     <script src="data/constructora.js" type="module"></script>
     <script src="data/cotizaciones.js" type="module"></script>
     <script src="data/empleados.js" type="module"></script>
     <script src="data/productos.js" type="module"></script>
-</body>
+    <!-- coded by Himic-->
+  </body>
 </html>

@@ -1,325 +1,62 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-  <head>
-    <title>Home</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-  </head>
-  <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container"><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-    </div>
-    <div class="page">
-      <div id="home">
-        <!-- Page Header-->
-        <header class="section page-header">
-          <!-- RD Navbar-->
-          <div class="rd-navbar-wrap">
-            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-              <div class="rd-navbar-main-outer">
-                <div class="rd-navbar-main">
-                  <!-- RD Navbar Panel-->
-                  <div class="rd-navbar-panel">
-                    <!-- RD Navbar Toggle-->
-                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                    <!-- RD Navbar Brand-->
-                    <div class="rd-navbar-brand"><a class="brand" href="index.html"><h2>Sergio Prada</h2></a></div>
-                  </div>
-                  <div class="rd-navbar-main-element">
-                    <div class="rd-navbar-nav-wrap">
-                      <ul class="rd-navbar-nav">
-                        <li class="rd-nav-item active"><a class="rd-nav-link" href="#home">Home</a></li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="#categoriass">Categorias</a></li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="#empleadoss">Empleados</a></li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="#productoss">Productos</a></li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="#constructora">Constructora</a></li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="#cotizaciones">Cotizaciones</a></li>
-                      </ul>
-                    </div>
-                  </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form id="registrar" method="post">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" id="newusuario" required>
+                    <label for="newusuario">Nombre de Usuario</label>
                 </div>
-              </div>
-            </nav>
-          </div>
-        </header>
-        
-        <!-- Home -->
-        <div class="container">
-          <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Web Alquilartemis</h1>
-        </div>
-        <!-- Swiper-->
-        <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-autoplay="4859" data-simulate-touch="true" data-direction="vertical" data-nav="false">
-          <div class="swiper-wrapper text-center">
-            <div class="swiper-slide" data-slide-bg="img/view1.jpg">
-              <div class="swiper-slide-caption section-md">
-                <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Mobile App Development</h1>
-                  <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses.</p><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+                <div class="input-group">
+                    <select id="rango">
+                        <option value=""><label for="rango">Seleccione Rango</label></option>
+                        <option value="usuario">Usuario</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-slide-bg="img/view2.jpg">
-              <div class="swiper-slide-caption section-md">
-                <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Experienced Team</h1>
-                  <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">We are a team of qualified software developers, aimed at creating unique and powerful tools for your business & everyday life.</p><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+                <div class="input-group">
+                    <input type="password" id="newContraseña" required>
+                    <label for="newContraseña">Contraseña</label>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-slide-bg="img/view3.jpg">
-              <div class="swiper-slide-caption section-md">
-                <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Award-Winning Software</h1>
-                  <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">The software solutions developed by our company have been numerously awarded for usability and innovative features.</p><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+                <button type="submit" class="btn" href="./">Sign Up</button>
+                <div class="sign-link">
+                    <p>Ya tienes cuenta? <a href="#" class="signIn-link">Sign In</a></p>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Swiper Pagination-->
-          <div class="swiper-pagination__module">
-            <div class="swiper-pagination__fraction"><span class="swiper-pagination__fraction-index">00</span><span class="swiper-pagination__fraction-divider">/</span><span class="swiper-pagination__fraction-count">00</span></div>
-            <div class="swiper-pagination__divider"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </section>
-      </div>
-
-      <div class="container m-3">
-        <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Acerca de Nosotros</h1>
-      </div>
-
-      <!-- Info categorias-->
-      <section class="section section-fluid bg-default">
-        <div class="parallax-container" data-parallax-img="img/infoCatego2.jpg">
-          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
-            <div class="container">
-              <div class="row row-30 justify-content-end text-right">
-                <div class="col-sm-7">
-                  <h3 class="wow fadeInLeft">Todas las categorias diponibles!</h3>
+            </form>
+        </div>
+        <div class="form-wrapper sign-in">
+            <form id="login" method="post">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" id="usuario" required>
+                    <label for="">Nombre de usuario</label>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Parte de categorias-->
-      <section class="section section-sm section-first bg-default text-center" id="categoriass">
-        <div class="container">
-          <div class="row row-30 justify-content-center">
-            <!-- Tabla  Categorias -->
-            <table class="table table-striped-columns">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nombre Categorias</th>
-                  <th scope="col">Descripcion</th>
-                  <th scope="col">Imagen</th>
-                </tr>
-              </thead>
-              <tbody id="categorias">
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- info empleados-->
-      <section class="section section-fluid bg-default">
-        <div class="parallax-container" data-parallax-img="img/empleados.jpg">
-          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
-            <div class="container">
-              <div class="row row-30 justify-content-end text-right">
-                <div class="col-sm-7">
-                  <h3 class="wow fadeInLeft">Los mejores trabajando para ti!</h3>
+                <div class="input-group">
+                    <input type="password" id="contraseña" required>
+                    <label for="">Contraseña</label>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Parte de Empleados-->
-      <section class="section section-sm section-first bg-default text-center" id="empleadoss">
-        <div class="container">
-          <div class="row row-30 justify-content-center">
-            <!-- Tabla  empleados -->
-            <table class="table table-striped-columns">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nombre empleado</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Celular</th>
-                  <th scope="col">Contraseña</th>
-                </tr>
-              </thead>
-              <tbody id="empleados">
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- Info productos-->
-      <section class="section section-fluid bg-default">
-        <div class="parallax-container" data-parallax-img="img/productos.jpg">
-          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
-            <div class="container">
-              <div class="row row-30 justify-content-end text-right">
-                <div class="col-sm-7">
-                  <h3 class="wow fadeInLeft">Todas la marcas diponibles!</h3>
+                <div class="forgot-pass">
+                    <a href="#">Olvidaste la contraseña?</a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Parte de productos-->
-      <section class="section section-sm section-first bg-default text-center" id="productoss">
-        <div class="container">
-          <div class="row row-30 justify-content-center">
-            <!-- Tabla  productos -->
-            <table class="table table-striped-columns">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nombre producto</th>
-                  <th scope="col">Precio Dia</th>
-                  <th scope="col">Stock</th>
-                  <th scope="col">categoria</th>
-                </tr>
-              </thead>
-              <tbody id="productos">
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- Info constructoras-->
-      <section class="section section-fluid bg-default">
-        <div class="parallax-container" data-parallax-img="img/constructoras.jpg">
-          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
-            <div class="container">
-              <div class="row row-30 justify-content-end text-right">
-                <div class="col-sm-7">
-                  <h3 class="wow fadeInLeft">Nuestros Clientes mas frecuentes!</h3>
+                <button type="submit" class="btn" href="./" >Login</button>
+                <div class="sign-link">
+                    <p>No tienes Cuenta? <a href="#" class="signUp-link">Sign Up</a></p>
                 </div>
-              </div>
-            </div>
-          </div>
+            </form>
         </div>
-      </section>
-
-      <!-- Parte de constructoras-->
-      <section class="section section-sm section-first bg-default text-center" id="constructoras">
-        <div class="container">
-          <div class="row row-30 justify-content-center">
-            <!-- Tabla  Constuctora -->
-            <table class="table table-striped-columns">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nombre constructora</th>
-                  <th scope="col">Nit Constructora</th>
-                  <th scope="col">Representante</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Telefono</th>
-                </tr>
-              </thead>
-              <tbody id="constructora">
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- Info Cotizaciones-->
-      <section class="section section-fluid bg-default">
-        <div class="parallax-container" data-parallax-img="img/cotizaciones.jpg">
-          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
-            <div class="container">
-              <div class="row row-30 justify-content-end text-right">
-                <div class="col-sm-7">
-                  <h3 class="wow fadeInLeft">Algunas de nustras cotizaciones!</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Parte de cotizaciones-->
-      <section class="section section-sm section-first bg-default text-center" id="cotizacioens">
-        <div class="container">
-          <div class="row row-30 justify-content-center">
-            <!-- Tabla  cotizaciones -->
-            <table class="table table-striped-columns">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Empleado</th>
-                  <th scope="col">Contructora</th>
-                  <th scope="col">fecha</th>
-                  <th scope="col">hora</th>
-                  <th scope="col">Dia</th>
-                  <th scope="col">Duracion</th>
-                </tr>
-              </thead>
-              <tbody id="cotizaciones">
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Page Footer-->
-      <footer class="section section-fluid footer-minimal context-dark">
-        <div class="bg-gray-15">
-          <div class="container-fluid">
-            <div class="footer-minimal-bottom-panel text-sm-left">
-              <div class="row row-10 align-items-md-center">
-                <div class="col-sm-6 col-md-4 order-sm-first">
-                  <!-- Rights-->
-                  <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Sergio Prada 🤠 </span>
-                  </p>
-                </div>
-                <div class="col-sm-6 col-md-4 text-md-right"><span>All rights reserved.</span> <span>Design&nbsp;by&nbsp;<a href="https://github.com/Sergio-Prada-963">Camper Sergio Prada</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      
     </div>
 
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/data/loguear.js" type="module"></script>
+</body>
 
-    <!-- tablas -->
-    <script src="data/categorias.js" type="module"></script>
-    <script src="data/constructora.js" type="module"></script>
-    <script src="data/cotizaciones.js" type="module"></script>
-    <script src="data/empleados.js" type="module"></script>
-    <script src="data/productos.js" type="module"></script>
-    <!-- coded by Himic-->
-  </body>
 </html>

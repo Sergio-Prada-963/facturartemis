@@ -5,6 +5,7 @@ import routerCotizaciones from "./routes/cotizaciones.routes.js"
 import routerEmpleados from "./routes/empleados.routes.js"
 import routerProductos from "./routes/productos.routes.js"
 import routerCotxPro from "./routes/CxP.routes.js";
+import routerUsuarios from "./routes/usuarios.routes.js";
 
 const app = express();
 app.set("port",3309);
@@ -20,5 +21,6 @@ app.use("/api/empleados",routerEmpleados)
 app.use("/api/productos",routerProductos)
 app.use("/api/cotizaciones",routerCotizaciones)
 app.use("/api/CotxPro",routerCotxPro)
+app.use("/api/usuarios",routerUsuarios)
 
 export default app;

@@ -5,11 +5,11 @@
 html{
     height: 100vh;
 }
-body{
+/* body{
     background-image: url(Fortnite_Flatline.svg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 .offcanvas{
     display: flex;
     flex-direction: row;
@@ -28,4 +28,13 @@ body{
     .homme{
         margin-right: -160%;
     }
+}
+
+.tabla{
+    margin: 2% 10% auto 10%;
+}
+
+.fomu{
+    border: 1px black solid;
+    border-radius: 15px;
 }

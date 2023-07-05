@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2023 a las 06:12:04
+-- Tiempo de generación: 05-07-2023 a las 04:07:20
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `categorias` (
   `id_categoria` int(11) NOT NULL,
   `nombre_categoria` varchar(100) NOT NULL,
   `descripcion_categoria` varchar(255) NOT NULL,
-  `img_categoria` varchar(100) NOT NULL
+  `img_categoria` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -41,7 +41,9 @@ CREATE TABLE `categorias` (
 INSERT INTO `categorias` (`id_categoria`, `nombre_categoria`, `descripcion_categoria`, `img_categoria`) VALUES
 (1, 'Herramientas', 'Herramientas inalámbricas y para talleres. Diseño pionero, tecnología y alta durabilidad.', ''),
 (2, 'Materia Prima', 'Compra en línea Materiales de Construcción, la Tienda con los mejores precios con envío gratis o retiro en tienda. ', ''),
-(3, 'Acero', 'Encuentra los materiales que necesitas para tu proyecto de construcción. Contamos con una amplia variedad de productos de gran calidad.', '');
+(3, 'Acero', 'Encuentra los materiales que necesitas para tu proyecto de construcción. Contamos con una amplia variedad de productos de gran calidad.', ''),
+(4, 'nombre de prueva actualizada', 'descripcion de prueva actualizada', 'https://images.adsttc.com/media/images/57f4/bcfd/e58e/ce8d/3d00/0161/large_jpg/ED_PIA_SML_38.jpg?1475656944'),
+(35, 'Ladrillos', 'ladrillos rojos para edificios de concreto', 'https://img2.freepng.es/20180925/tio/kisspng-brick-building-materials-stock-photography-stas-st-bricklaying-experts-bricklayers-gold-coast-5baa3bbe0446a9.6755996715378830700175.jpg');
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,8 @@ CREATE TABLE `constructoras` (
 INSERT INTO `constructoras` (`id_constructora`, `nombre_constructora`, `nit_constructora`, `nombre_representante`, `email_contacto`, `telefono_contacto`) VALUES
 (1, 'Omega CORP S.A.S', 564856156, 'Fransisco Pérez', 'omega@corp.com', 1456156),
 (2, 'Tríade Constructura S.A.S', 564874578, 'Lucía Bejarano', 'triade@construct.com', 5615665),
-(3, 'Jet Constructora S.A.S', 484156564, 'Pedro Solano', 'jet@constructoras.com', 584653186);
+(3, 'Jet Constructora S.A.S', 484156564, 'Pedro Solano', 'jet@constructoras.com', 584653186),
+(4, 'agros', 15151515, 'Juan', 'juan@gmail.com', 31535336);
 
 -- --------------------------------------------------------
 
@@ -82,6 +85,13 @@ CREATE TABLE `cotizaciones` (
   `dia_alquiler` varchar(55) NOT NULL,
   `duracion_alquiler` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `cotizaciones`
+--
+
+INSERT INTO `cotizaciones` (`id_cotizacion`, `fk_id_empleado`, `fk_id_constructora`, `fecha_cotizacion`, `hora_cotizacion`, `dia_alquiler`, `duracion_alquiler`) VALUES
+(1, 1, 3, '2023-06-23', '2:30pm', 'Martes', 20);
 
 -- --------------------------------------------------------
 
@@ -104,7 +114,8 @@ CREATE TABLE `empleados` (
 INSERT INTO `empleados` (`id_empleado`, `nombre_empleado`, `email_empleado`, `celular_empleado`, `password_empleado`) VALUES
 (1, 'Esteban Quito', 'estebanquito@mail.com', 311254698, '123'),
 (2, 'Verónica Vargas', 'verovargas@mail.com', 317452010, '123'),
-(3, 'Mariano Pedraza', 'marianopedraza@mail.com', 316229941, '123');
+(3, 'Mariano Pedraza', 'marianopedraza@mail.com', 316229941, '123'),
+(6, 'persona de prueva', 'prueva@gmail.com', 123456789, '321');
 
 -- --------------------------------------------------------
 
@@ -127,8 +138,8 @@ CREATE TABLE `productos` (
 INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_x_dia`, `stock_producto`, `categoria_producto`) VALUES
 (1, 'Serruchos', 50000, NULL, 1),
 (2, 'Bulto Cemento', 350000, NULL, 2),
-(3, 'Varillas', 120000, NULL, 3);
-
+(3, 'Varillas', 120000, NULL, 3),
+(5, 'Cierra Electrica', 50000, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -143,9 +154,37 @@ CREATE TABLE `productos_x_cotizaciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tablas volcadas
+-- Volcado de datos para la tabla `productos_x_cotizaciones`
 --
 
+INSERT INTO `productos_x_cotizaciones` (`id_registro`, `fk_id_producto`, `fk_id_detalle`) VALUES
+(1, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `nombre_usuario` varchar(50) NOT NULL,
+  `rango` text NOT NULL,
+  `contraseña` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `rango`, `contraseña`) VALUES
+(1, 'Sergio', 'administrador', '123'),
+(3, 'Juan', 'usuario', '852'),
+(4, 'Alejandro', 'usuario', '123');
+
+--
+-- Índices para tablas volcadas
+--
 
 --
 -- Indices de la tabla `categorias`
@@ -189,6 +228,12 @@ ALTER TABLE `productos_x_cotizaciones`
   ADD KEY `fk_id_detalle` (`fk_id_detalle`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -196,41 +241,48 @@ ALTER TABLE `productos_x_cotizaciones`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `constructoras`
 --
 ALTER TABLE `constructoras`
-  MODIFY `id_constructora` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_constructora` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `cotizaciones`
 --
 ALTER TABLE `cotizaciones`
-  MODIFY `id_cotizacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cotizacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `productos_x_cotizaciones`
 --
 ALTER TABLE `productos_x_cotizaciones`
-  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
 --
+
 --
 -- Filtros para la tabla `cotizaciones`
 --

@@ -12,53 +12,13 @@ async function listar(){
         const {CategoriaID, CategoriaNombre, Descripcion, Imagen} = element
         tabla.innerHTML += `
         <tr>
-            <td>${CategoriaID}</td>
-            <td>${CategoriaNombre}</td>
-            <td>${Descripcion}</td>
-            <td>${Imagen}</td>
+            <td id="idC" >${CategoriaID}</td>
+            <td id="newNombre" >${CategoriaNombre}</td>
+            <td id="newDescripcion" >${Descripcion}</td>
+            <td id="newImg" >${Imagen}</td>
             <td><button type="button" class="btn btn-outline-danger eliminar" id="${CategoriaID}" onClick="window.location.reload();">Eliminar</button></td>
-            <td><button type="button" class="btn btn-outline-info"  data-bs-toggle="modal" data-bs-target="#staticBackdrop${CategoriaID}">Editar</button></td>
-        </tr>
-
-    <div class="modal fade" id="staticBackdrop${CategoriaID}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Categoria</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form class="rd-form rd-form-variant-2 rd-mailform" id="nuevo" data-form-output="form-output-global" data-form-type="contact-modal" method="post">
-                    <div class="row row-14 gutters-14">
-                      <div class="col-12">
-                        <div class="form-wrap">
-                          <label for="newNombre${CategoriaID}">Nombre Categoria</label>
-                          <input class="form-input" id="newNombre${CategoriaID}" type="text" data-constraints="@Required" value="${CategoriaNombre}">
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-wrap">
-                          <label for="newDescripcion${CategoriaID}">Descripcion</label>
-                          <textarea class="form-input" id="newDescripcion${CategoriaID}" type="text">${Descripcion}</textarea>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-wrap">
-                          <label for="newImg${CategoriaID}">Imagen</label>
-                          <input class="form-input" id="newImg${CategoriaID}" type="file">
-                        </div>
-                      </div>
-                    </div>
-                    <button class="btn btn-success actualizar" type="submit" href="./" id="${CategoriaID}" onClick="window.location.reload();">Editar</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-    </div>
-        `;
+            <td><button type="button" class="btn btn-outline-info actualizar" data-bs-toggle="modal" data-bs-target="#update">Editar</button></td>
+        </tr>`;
     });
 }
 
@@ -94,21 +54,42 @@ function newCategoria(e){
 
 function editar(e){
     if(e.target.classList.contains('actualizar')){
-        const id = e.target.getAttribute('id');
-        const nombre = document.getElementById(`newNombre${id}`).value;
-        const descripcion = document.getElementById(`newDescripcion${id}`).value;
-        const img = document.getElementById(`newImg${id}`).value;
-        const datos = {
-            CategoriaID: id,
-            CategoriaNombre: nombre,
-            Descripcion: descripcion,
-            Imagen: img
+        console.log(e.target);
+        const catego = e.target.parentElement.parentElement
+        console.log(catego);
+        const datosV = {
+          id: catego.querySelector('#idC').textContent,
+          nombre: catego.querySelector('#newNombre').textContent,
+          descripcion: catego.querySelector('#newDescripcion').textContent,
+          img: catego.querySelector('#newImg').textContent
         }
-        console.log(datos);
-        editarCategory(datos);
+        console.log(datosV);
+        const id = document.getElementById('idC');
+        const nombre = document.getElementById(`newNombre`).value;
+        const descripcion = document.getElementById(`newDescripcion`).value;
+        const img = document.getElementById(`newImg`).value;
+        
+        console.log(datosV.nombre);
+        document.getElementById('Nombre').value = datosV.nombre;
+        document.getElementById('Descripcion').value = datosV.descripcion;
     }
 }
 
+const actulizarr = document.querySelector('#updatee');
+actulizarr.addEventListener('click', update)
+
+function update(e){
+  e.preventDefault();
+  const up = actulizarr.parentElement;
+  console.log(up);
+  const datosN = {
+    CategoriaID: up.getElementsByClassName('idCategoria'),
+    CategoriaNombre: up.getElementsByClassName('Nombre'),
+    Descripcion: up.getElementsByClassName('Descripcion'),
+    Imagen: up.getElementsByClassName('Imagen'),
+  };
+  console.log(datosN);
+}
 
 /* INGRESAR NUEVA CATEGORIA  - CRUD (C) */
 

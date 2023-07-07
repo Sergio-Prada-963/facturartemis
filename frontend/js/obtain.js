@@ -58,37 +58,29 @@ function editar(e){
         const catego = e.target.parentElement.parentElement
         console.log(catego);
         const datosV = {
-          id: catego.querySelector('#idC').textContent,
           nombre: catego.querySelector('#newNombre').textContent,
-          descripcion: catego.querySelector('#newDescripcion').textContent,
-          img: catego.querySelector('#newImg').textContent
+          descripcion: catego.querySelector('#newDescripcion').textContent
         }
-        console.log(datosV);
-        const id = document.getElementById('idC');
-        const nombre = document.getElementById(`newNombre`).value;
-        const descripcion = document.getElementById(`newDescripcion`).value;
-        const img = document.getElementById(`newImg`).value;
-        
-        console.log(datosV.nombre);
         document.getElementById('Nombre').value = datosV.nombre;
         document.getElementById('Descripcion').value = datosV.descripcion;
     }
 }
 
-const actulizarr = document.querySelector('#updatee');
-actulizarr.addEventListener('click', update)
+const actulizarr = document.querySelector('#updat');
+actulizarr.addEventListener('submit', update)
 
 function update(e){
   e.preventDefault();
-  const up = actulizarr.parentElement;
+  const up = actulizarr;
   console.log(up);
   const datosN = {
-    CategoriaID: up.getElementsByClassName('idCategoria'),
-    CategoriaNombre: up.getElementsByClassName('Nombre'),
-    Descripcion: up.getElementsByClassName('Descripcion'),
-    Imagen: up.getElementsByClassName('Imagen'),
+    CategoriaID: up.querySelector('#idCategoria'),
+    CategoriaNombre: up.querySelector('#Nombre').value,
+    Descripcion: up.querySelector('#Descripcion').value,
+    Imagen: up.querySelector('#Img').value
   };
   console.log(datosN);
+  editarCategory(datosN);
 }
 
 /* INGRESAR NUEVA CATEGORIA  - CRUD (C) */

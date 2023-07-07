@@ -36,12 +36,12 @@ export const obtenerCategory = async (id) => {
  
 };
 
-export const editarCategory = async (datos) => {
+export const editarCategory = async (datosN) => {
     try {
-        await fetch(`${url}/${datos.CategoriaID}`, {
+        await fetch(`${url}/${datosN.CategoriaID}`, {
             method: "PUT",
             headers:{'Content-Type':'application/json'},
-            body:JSON.stringify(datos)
+            body:JSON.stringify(datosN)
         }).then(response => response.json()).then(updatedDatos => {
             console.log('Datos actualizados:', updatedDatos);
         });

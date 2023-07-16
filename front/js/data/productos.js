@@ -13,7 +13,7 @@ async function cargaproductos(){
           <td>${precio_x_dia}</td>
           <td>${stock_producto}</td>
           <td>${nombre_categoria}</td>
-          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="./" id="${id_producto}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalProd${id_producto}" data-toggle="modal">Actualizar</a></div></td>
+          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="Home.html" id="${id_producto}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalProd${id_producto}" data-toggle="modal">Actualizar</a></div></td>
         </tr>
       <div class="modal fade" id="modalProd${id_producto}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -52,7 +52,7 @@ async function cargaproductos(){
                     </div>
                   </div>
                 </div>
-                <a class="button button-primary button-pipaluk actualizar" id="${id_producto}" type="submit" href="./" >Actualizar</a>
+                <a class="button button-primary button-pipaluk actualizar" id="${id_producto}" type="submit" href="Home.html" >Actualizar</a>
               </form>
             </div>
           </div>

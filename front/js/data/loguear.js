@@ -10,7 +10,7 @@ async function verificar(e){
     const usuarios = await getUsuarios();
     usuarios.forEach(element => {
         if(element.nombre_usuario === usuario && element.contraseña === contraseña){
-            window.location.href = "Home.html";
+            window.location.href = "./pages/Home.html";
         }
     });
 }

@@ -15,7 +15,7 @@ async function cargaCotizacion(){
           <td>${hora_cotizacion}</td>
           <td>${dia_alquiler}</td>
           <td>${duracion_alquiler}</td>
-          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="./" id="${id_cotizacion}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalCot${id_cotizacion}" data-toggle="modal">Actualizar</a></div></td>
+          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="Home.html" id="${id_cotizacion}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalCot${id_cotizacion}" data-toggle="modal">Actualizar</a></div></td>
         </tr>
       <div class="modal fade" id="modalCot${id_cotizacion}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -77,7 +77,7 @@ async function cargaCotizacion(){
                     </div>
                   </div>
                 </div>
-                <a class="button button-primary button-pipaluk actualizar" type="submit" href="./" id="${id_cotizacion}" >Agregar</a>
+                <a class="button button-primary button-pipaluk actualizar" type="submit" href="Home.html" id="${id_cotizacion}" >Agregar</a>
               </form>
             </div>
           </div>

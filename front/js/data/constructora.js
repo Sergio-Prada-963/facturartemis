@@ -14,7 +14,7 @@ async function cargaCostructora(){
           <td>${nombre_representante}</td>
           <td>${email_contacto}</td>
           <td>${telefono_contacto}</td>
-          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="./" id="${id_constructora}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalCont${id_constructora}" data-toggle="modal">Actualizar</a></div></td>
+          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="Home.html" id="${id_constructora}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalCont${id_constructora}" data-toggle="modal">Actualizar</a></div></td>
         </tr>
       <div class="modal fade" id="modalCont${id_constructora}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -57,7 +57,7 @@ async function cargaCostructora(){
                     </div>
                   </div>
                 </div>
-                <a class="button button-primary button-pipaluk actualizar" type="submit" href="./" id="${id_constructora}">Actualizar</a>
+                <a class="button button-primary button-pipaluk actualizar" type="submit" href="Home.html" id="${id_constructora}">Actualizar</a>
               </form>
             </div>
           </div>

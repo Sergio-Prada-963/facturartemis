@@ -13,7 +13,7 @@ async function cargaempleado(){
           <td>${email_empleado}</td>
           <td>${celular_empleado}</td>
           <td>${password_empleado}</td>
-          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="./" id="${id_empleado}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalEmp${id_empleado}" data-toggle="modal">Actualizar</a></div></td>
+          <td><div class="group-sm group-middle group justify-content-end"><a class="button button-ujarak borrar" href="Home.html" id="${id_empleado}">Borrar</a><a class="button button-primary-outline button-ujarak"  href="#modalEmp${id_empleado}" data-toggle="modal">Actualizar</a></div></td>
         </tr>
       <div class="modal fade" id="modalEmp${id_empleado}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -50,7 +50,7 @@ async function cargaempleado(){
                     </div>
                   </div>
                 </div>
-                <a class="button button-primary button-pipaluk actualizar" href="./" type="submit" id="${id_empleado}">Actualizar</a>
+                <a class="button button-primary button-pipaluk actualizar" href="Home.html" type="submit" id="${id_empleado}">Actualizar</a>
             </div>
           </div>
         </div>
